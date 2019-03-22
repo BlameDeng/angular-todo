@@ -1,0 +1,12 @@
+<ul class="todo-list">
+    <li class="todo-item" *ngIf="!todos.length">
+        Nothing to do.
+    </li>
+    <li class="todo-item" [ngClass]="{done:todo.done}" *ngFor="let todo of todos;let i=index;trackBy:trackByTodos">
+        <span class="index" [ngClass]="{done:todo.done}">{{ i+1 }}.</span>
+        <span class="box" [ngClass]="{done:todo.done}" (click)="handleClickBox(todo.id)"></span>
+        <span class="date" [ngClass]="{done:todo.done}">{{ todo.createdAt | date:'shortDate'}}</span>
+        <span class="content" [ngClass]="{done:todo.done}">{{ todo.content }}</span>
+        <button class="delete" (click)="handleClickDelete(todo.id)">Delete</button>
+    </li>
+</ul>

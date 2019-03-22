@@ -1,0 +1,25 @@
+.add-todo {
+    input {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+        padding: 0 8px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        &:focus {
+            outline: none;
+        }
+    }
+    button {
+        margin-left: 10px;
+        padding: 0 8px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+    }
+}
